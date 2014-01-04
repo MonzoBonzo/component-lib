@@ -1,0 +1,166 @@
+$info-box-height:    175px;
+$info-box-colour:    #bbbbbb;
+$info-details-colour: #ffffff;
+$info-image-height: $info-box-height * 0.49;
+$info-detail-height: $info-box-height * 0.50;
+$info-detail-position: center;
+
+$info-text-style:'Lato', sans-serif;
+$info-text-size:0.65em;
+
+$button-width: 80px;
+$button-height: 30px;
+$button-font-size: 14px;
+$button-font-colour: #ffffff;
+
+$button-default-bg: #2980b9;
+$button-default-bg-bottom: #2475ab;
+
+$button-soshi-bg: #f39c12;
+$button-soshi-bg-bottom: #e0930c;
+
+$button-negative-bg: #454545;
+$button-negative-bg-bottom: #2f2e2e;
+
+$button-positive-bg: #1abc9c;
+$button-positive-bg-bottom: #12ab8d;
+
+$button-warning-bg: #e74c3c;
+$button-warning-bg-bottom: #db4334;
+
+@mixin border-radius($radius)
+{
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin box-shadows($shadow...)
+{
+    -webkit-box-shadow: $shadow;
+	  -moz-box-shadow:  $shadow;
+	   -o-box-shadow:   $shadow;
+        box-shadow:     $shadow;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+* 
+{
+    margin:0px;
+    padding:0px;
+    border: 0px;
+}
+
+/***********************************************************************************/
+/*                                  INF0 BOX                                       */
+/***********************************************************************************/
+.info-box
+{
+    height:$info-box-height;
+    width:100%;
+}
+
+.info-box-skin
+{
+    background: $info-box-colour;    
+    border: 1px solid $info-box-colour;
+	
+	@include border-radius(2px);
+	
+	border-right: 1px solid $info-box-colour;
+    border-bottom: 1px solid $info-box-colour;
+	
+	@include box-shadows(3px 3px 10px 0px #ddd);
+}
+
+.info-image { height:$info-image-height; }
+
+.info-details
+{
+    position:relative;
+    top:2px;
+    height:$info-detail-height;
+    text-align: $info-detail-position;    
+    font-family: $info-text-style;
+	
+	p {
+		font-size:$info-text-size;
+		padding: 5px 0px 10px 0px;
+	}
+}
+
+.info-details-skin { background: $info-details-colour; }
+
+/***********************************************************************************/
+/*                                     Button                                      */
+/***********************************************************************************/
+.btn
+{
+    /* Structure */
+    padding: 0px;
+    border: 0px;
+    margin:0px;
+ 
+    outline: none;
+
+    width: $button-width;
+    height: $button-height;
+
+    font-size: $button-font-size;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-skin
+{
+    /* Visuals */
+    color: white;
+    background: $button-default-bg;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    
+    border-bottom: 2px solid $button-default-bg-bottom;
+	
+	@include box-shadows(inset 0 -2px $button-default-bg-bottom);  
+}
+
+.btn-skin:active
+{
+    top: 1px;
+    outline: none;
+	@include box-shadows(none); 
+}
+
+.btn-negative
+{
+    /* Visuals */
+    background: $button-negative-bg;    
+    border-bottom: 2px solid $button-negative-bg-bottom;	
+	@include box-shadows(inset 0 -2px $button-negative-bg-bottom); 
+}
+
+.btn-soshi
+{
+    /* Visuals - Soshi Orange */
+    background: $button-soshi-bg;    
+    border-bottom: 2px solid $button-soshi-bg-bottom;	
+	@include box-shadows(inset 0 -2px $button-soshi-bg-bottom);    
+}
+
+.btn-positive
+{
+    /* Visuals - Green */
+    background: $button-positive-bg;    
+    border-bottom: 2px solid $button-positive-bg-bottom;	
+	@include box-shadows(inset 0 -2px $button-positive-bg-bottom);    
+}
+
+.btn-warning
+{
+    /* Visuals - Red */
+    background: $button-warning-bg;    
+    border-bottom: 2px solid $button-warning-bg-bottom;	
+	@include box-shadows(inset 0 -2px $button-warning-bg-bottom);    
+}
