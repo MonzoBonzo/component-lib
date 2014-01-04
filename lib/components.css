@@ -1,0 +1,133 @@
+@import url('http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+* 
+{
+    margin:0px;
+    padding:0px;
+    border: 0px;
+}
+
+/***********************************************************************************/
+/*                                  INF0 BOX                                       */
+/***********************************************************************************/
+.info-box
+{
+    height:175px;
+    width:100%;
+}
+
+.info-box-skin
+{
+    background: #bbbbbb;
+    
+    border: 1px solid #bbbbbb;
+    border-radius:2px;
+
+    border-right: 1px solid #bbbbbb;
+    border-bottom: 1px solid #bbbbbb;
+    
+    -moz-box-shadow:    3px 3px 0px 0px #ddd;
+    -webkit-box-shadow: 3px 3px 0px 0px #ddd;
+    box-shadow:         3px 3px 0px 0px #ddd;
+}
+
+.info-image { height:49%; }
+
+.info-details
+{
+    position:relative;
+    top:2px;
+    height:50%;
+    text-align: center;    
+    font-family: 'Lato', sans-serif;
+}
+
+.info-details p {
+    font-size:0.65em;
+    padding: 5px 0px 10px 0px;
+}
+
+.info-details-skin { background: #ffffff; }
+
+
+/***********************************************************************************/
+/*                                     Button                                      */
+/***********************************************************************************/
+.btn
+{
+    /* Structure */
+    padding: 0px;
+    border: 0px;
+    margin:0px;
+    
+    outline: none;
+
+    width: 80px;
+    height: 30px;
+
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-skin
+{
+    /* Visuals */
+    color: white;
+    background: #2980b9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    
+    border-bottom: 2px solid #2475ab;
+
+    -webkit-box-shadow: inset 0 -2px #2475ab;
+    -moz-box-shadow:inset 0 -2px #2475ab;
+    box-shadow: inset 0 -2px #2475ab;    
+}
+
+.btn-skin:active
+{
+    top: 1px;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn-negative
+{
+    /* Visuals */
+    background: #454545;    
+    border-bottom: 2px solid #2f2e2e;
+    -webkit-box-shadow: inset 0 -2px #2f2e2e;
+    -moz-box-shadow:inset 0 -2px #2f2e2e;
+    box-shadow: inset 0 -2px #2f2e2e;    
+}
+
+.btn-soshi
+{
+    /* Visuals - Soshi Orange */
+    background: #f39c12;    
+    border-bottom: 2px solid #e0930c;
+    -webkit-box-shadow: inset 0 -2px #e0930c;
+    -moz-box-shadow:inset 0 -2px #e0930c;
+    box-shadow: inset 0 -2px #e0930c;    
+}
+
+.btn-positive
+{
+    /* Visuals - Green */
+    background: #1abc9c;    
+    border-bottom: 2px solid #12ab8d;
+    -webkit-box-shadow: inset 0 -2px #12ab8d;
+    -moz-box-shadow:inset 0 -2px #12ab8d;
+    box-shadow: inset 0 -2px #12ab8d;    
+}
+
+.btn-warning
+{
+    /* Visuals - Red */
+    background: #e74c3c;    
+    border-bottom: 2px solid #db4334;
+    -webkit-box-shadow: inset 0 -2px #db4334;
+    -moz-box-shadow:inset 0 -2px #db4334;
+    box-shadow: inset 0 -2px #db4334;    
+}
